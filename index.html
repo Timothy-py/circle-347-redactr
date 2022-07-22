@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name of chosen challenge</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redactr</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.mjs"></script>
 </head>
-<body>
-    
-    <h2>make some magic here!!</h2>
 
-    <!-- // ============= EEND DO NOT EDIT ============== // -->
-    <script src="index.mjs" type="module"></script>
-    <!-- // ============= EEND DO NOT EDIT ============== // -->
+<body>
+
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+  <form onsubmit="return processContent()">
+    <h3>Redactr</h3>
+    <h6>by Circle 347</h6>
+
+    <label for="content">Content</label>
+    <textarea name="text" id="content" cols="40" rows="5" placeholder="Paste/Type content here..." required></textarea>
+
+    <label for="scramble">Scramble</label>
+    <input type="input" placeholder="Words to scramble separated by space" id="scramble">
+
+    <label for="repl">Replacement</label>
+    <input type="input" placeholder="A character[?,-,^,& etc.] or word to use for replacment" id="repl">
+
+    <button type="submit">Redact Now</button>
+    <div id="resultDiv" class="hide">
+      <label for="content">Result</label>
+      <textarea name="text" id="result" cols="40" rows="10"></textarea>
+    </div>
+    <div id="stats">
+      <label for="content">Stats:</label>
+      <div id="scanned"></div><br>
+      <div id="time"></div>
+    </div>
+  </form>
+
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
+  <script src="index.mjs" type="module"></script>
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
 </body>
+
 </html>
